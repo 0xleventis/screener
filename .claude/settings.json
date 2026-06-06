@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(npx tsc *)",
+      "Bash(npx vite *)",
+      "Bash(New-Item -ItemType Directory -Path \"c:\\\\Users\\\\EMMY-TECH\\\\screener\\\\public\" -Force)",
+      "Bash(Out-Null)",
+      "Bash(Copy-Item \"c:\\\\Users\\\\EMMY-TECH\\\\screener\\\\dist\\\\assets\\\\logo.png\" \"c:\\\\Users\\\\EMMY-TECH\\\\screener\\\\public\\\\logo.png\")",
+      "Bash(node -e \"require\\('@supabase/supabase-js'\\); console.log\\('ok'\\)\")",
+      "Bash(curl -s \"https://nbihualpuossruymxgec.supabase.co/auth/v1/settings\")",
+      "Bash(curl -s \"https://nbihualpuossruymxgec.supabase.co/auth/v1/settings\" -H \"apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5iaWh1YWxwdW9zc3J1eW14Z2VjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA2OTg4NDAsImV4cCI6MjA5NjI3NDg0MH0.WF6uCxa-3EnitMzNeONEyIi9NF1MD5Q7wK2or0EDtRA\")",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(json.dumps\\({k:v for k,v in d.get\\('external',{}\\).items\\(\\) if v is not False}, indent=2\\)\\)\")"
+    ]
+  }
+}

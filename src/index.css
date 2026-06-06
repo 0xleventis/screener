@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-nova-bg text-nova-text font-sans;
+    min-height: 100vh;
+  }
+
+  :root {
+    color-scheme: dark;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.18); }
+
+  /* Hide scrollbar utility */
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+}
+
+@layer components {
+  /* Nova glow effect for accent elements */
+  .nova-glow {
+    text-shadow: 0 0 20px rgba(0, 229, 180, 0.6);
+  }
+
+  /* Animated grid background */
+  .bg-nova-grid-animated {
+    background-image:
+      linear-gradient(rgba(30, 30, 50, 0.35) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(30, 30, 50, 0.35) 1px, transparent 1px);
+    background-size: 40px 40px;
+    animation: gridMove 20s linear infinite;
+  }
+
+  /* Neon border glow on hover */
+  .neon-border-hover {
+    @apply transition-all duration-300;
+  }
+  .neon-border-hover:hover {
+    box-shadow: 0 0 0 1px rgba(0, 229, 180, 0.3), 0 0 20px rgba(0, 229, 180, 0.1);
+  }
+
+  /* Price flash states */
+  .price-up   { animation: flashGain 0.6s ease-in-out; }
+  .price-down { animation: flashLoss 0.6s ease-in-out; }
+
+  /* Table row style */
+  .data-table thead th {
+    @apply sticky top-0 z-10 bg-nova-surface/95 backdrop-blur-sm;
+  }
+}
+
+@layer utilities {
+  /* Gradient text */
+  .text-gradient-nova {
+    background: linear-gradient(135deg, #00e5b4, #7c63ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Background accent overlay for cards */
+  .bg-nova-accent-8 { background-color: rgba(0, 229, 180, 0.08); }
+  .bg-nova-accent-12 { background-color: rgba(0, 229, 180, 0.12); }
+}
+
+@keyframes gridMove {
+  0%   { background-position: 0 0; }
+  100% { background-position: 40px 40px; }
+}
+
+@keyframes flashGain {
+  0%, 100% { background-color: transparent; }
+  40%      { background-color: rgba(0, 217, 143, 0.18); }
+}
+
+@keyframes flashLoss {
+  0%, 100% { background-color: transparent; }
+  40%      { background-color: rgba(255, 69, 96, 0.18); }
+}
+
+/* Lightweight Charts dark overrides */
+.tv-lightweight-charts {
+  --tv-color-pane-background: transparent !important;
+}
