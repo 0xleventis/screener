@@ -16,7 +16,6 @@ import { formatPrice, formatCompact, formatAge, shortenAddress } from '../../uti
 import { getNetwork } from '../../utils/networks';
 import type { NormalizedPool, Trade } from '../../types';
 import { LiveIndicator } from '../../components/common/LiveIndicator';
-import { CommentSection } from '../../components/Comments/CommentSection';
 
 // ── Chain → bankr swap mapping ────────────────────────────────────────────────
 const BANKR_CHAIN: Record<string, string> = {
@@ -584,12 +583,6 @@ export function TokenPage() {
         </div>
       </div>
 
-      {/* ── Community comments ── */}
-      <CommentSection
-        network={network}
-        address={address}
-        tokenSymbol={pool?.baseToken.symbol}
-      />
     </div>
   );
 }
