@@ -3,9 +3,14 @@ import { createClient } from '@supabase/supabase-js';
 const url = import.meta.env.VITE_SUPABASE_URL ?? '';
 const key = import.meta.env.VITE_SUPABASE_ANON_KEY ?? '';
 
-export const supabase = createClient(url, key);
-
 export const isSupabaseReady = Boolean(url && key);
+
+// createClient throws if url is empty — provide dummy values when not configured
+// so the module loads safely; all callers gate on isSupabaseReady before using it
+export const supabase = createClient(
+  url || 'https://placeholder.supabase.co',
+  key || 'placeholder-anon-key',
+);
 
 export interface TokenComment {
   id: string;

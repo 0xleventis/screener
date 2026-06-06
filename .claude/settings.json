@@ -10,7 +10,9 @@
       "Bash(node -e \"require\\('@supabase/supabase-js'\\); console.log\\('ok'\\)\")",
       "Bash(curl -s \"https://nbihualpuossruymxgec.supabase.co/auth/v1/settings\")",
       "Bash(curl -s \"https://nbihualpuossruymxgec.supabase.co/auth/v1/settings\" -H \"apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5iaWh1YWxwdW9zc3J1eW14Z2VjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA2OTg4NDAsImV4cCI6MjA5NjI3NDg0MH0.WF6uCxa-3EnitMzNeONEyIi9NF1MD5Q7wK2or0EDtRA\")",
-      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(json.dumps\\({k:v for k,v in d.get\\('external',{}\\).items\\(\\) if v is not False}, indent=2\\)\\)\")"
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(json.dumps\\({k:v for k,v in d.get\\('external',{}\\).items\\(\\) if v is not False}, indent=2\\)\\)\")",
+      "Bash(curl -s https://screener-production-545f.up.railway.app/assets/index-Da4H1H3v.js)",
+      "Bash(node -e ' *)"
     ]
   }
 }
