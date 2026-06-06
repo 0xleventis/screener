@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "Bash(node -e \"require\\('./server.cjs'\\)\")",
+      "Bash(kill %1)",
+      "Bash(node -e ' *)"
+    ]
+  }
+}

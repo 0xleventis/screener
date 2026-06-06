@@ -20,7 +20,7 @@ app.use(
 app.use(express.static(path.join(__dirname, 'dist')));
 
 // SPA fallback — all unmatched routes return index.html so React Router works
-app.get('*', (_req, res) => {
+app.use((_req, res) => {
   res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
