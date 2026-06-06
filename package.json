@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "node server.cjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.107.0",
@@ -14,7 +15,9 @@
     "axios": "^1.7.3",
     "clsx": "^2.1.1",
     "date-fns": "^3.6.0",
+    "express": "^5.2.1",
     "framer-motion": "^11.3.19",
+    "http-proxy-middleware": "^4.0.0",
     "lightweight-charts": "^4.2.0",
     "lucide-react": "^0.414.0",
     "react": "^18.3.1",
